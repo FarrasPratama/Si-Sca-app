@@ -46,13 +46,22 @@
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="75px"
+        android:textStyle="bold"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="186dp"
+        android:text="Most Common Disease"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_penyakit"
         android:layout_width="match_parent"
         android:layout_height="459dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="200dp"
-        tools:listitem="@layout/item_row_penyakit"/>
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="230dp"
+        tools:listitem="@layout/item_row_penyakit" />
 
 
 </RelativeLayout>

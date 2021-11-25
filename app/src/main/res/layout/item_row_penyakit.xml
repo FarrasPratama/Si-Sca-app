@@ -1,29 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
-
-    <ImageView
-        android:id="@+id/img_item_photo"
-        android:layout_marginTop="10dp"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginEnd="16dp"
-        tools:src="@tools:sample/avatars"/>
-
-    <LinearLayout
+    android:padding="20dp"
+    android:layout_gravity="center"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    card_view:cardCornerRadius="10dp">
+    
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        
+        android:layout_height="200dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/gambar_penyakit"
+            android:layout_marginBottom="4dp"
+            android:layout_width="150dp"
+            android:layout_height="220dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars"/>
+
         <TextView
             android:id="@+id/tv_disease_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@id/gambar_penyakit"
+            android:layout_toRightOf="@id/gambar_penyakit"
             android:textSize="16sp"
             android:textStyle="bold"
             tools:text="@string/disease_name"/>
@@ -31,28 +44,71 @@
         <TextView
             android:id="@+id/tv_disease_detail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@id/layout_button"
+            android:layout_below="@id/tv_disease_name"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="0dp"
+            android:layout_toEndOf="@+id/gambar_penyakit"
+            android:layout_toRightOf="@id/gambar_penyakit"
             android:ellipsize="end"
             android:maxLines="2"
-            tools:text="@string/disease_detail"/>
+            tools:text="@string/disease_detail" />
 
         <TextView
             android:id="@+id/tv_disease_cure"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_button"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="85dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_toEndOf="@+id/gambar_penyakit"
+            android:layout_toRightOf="@+id/gambar_penyakit"
             android:ellipsize="end"
             android:maxLines="2"
-            tools:text="@string/disease_cure"/>
+            tools:text="@string/disease_cure" />
 
         <TextView
             android:id="@+id/tv_disease_level"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="15dp"
+            android:layout_above="@+id/layout_button"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="110dp"
+            android:layout_toEndOf="@id/gambar_penyakit"
+            android:layout_toRightOf="@+id/gambar_penyakit"
             android:ellipsize="end"
             android:maxLines="2"
-            tools:text="@string/disease_level"/>
+            tools:text="@string/disease_level" />
 
+
+
+    <LinearLayout
+        android:id="@+id/layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toEndOf="@id/gambar_penyakit"
+        android:layout_toRightOf="@id/gambar_penyakit">
+
+        <Button
+            android:id="@+id/btn_see_details"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="see details"
+            android:textSize="12sp" />
 
     </LinearLayout>
+    </RelativeLayout>
 
-</LinearLayout>
+</androidx.cardview.widget.CardView>

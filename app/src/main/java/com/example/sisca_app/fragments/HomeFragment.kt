@@ -1,5 +1,6 @@
 package com.example.sisca_app.fragments
 
+import android.content.Intent
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -9,11 +10,14 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.RelativeLayout
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sisca_app.Adapters.DataPenyakit
 import com.example.sisca_app.Adapters.ListPenyakitAdapter
+import com.example.sisca_app.Models.DetailPenyakit
+import com.example.sisca_app.Models.DetailPenyakit.Companion.EXTRA_DISEASE
 import com.example.sisca_app.Models.diseasedata
 import com.example.sisca_app.R
 import com.google.firebase.database.DataSnapshot
@@ -64,10 +68,31 @@ class HomeFragment : Fragment() {
 
     }
 
+    private fun showSelectedDisease(data: DataPenyakit) {
+        Toast.makeText(requireActivity(),"Anda Memilih "+data.namapenyakit,Toast.LENGTH_SHORT).show()
+    }
+
     private fun showRecyclerList() {
         rvdisease.layoutManager = LinearLayoutManager(requireActivity())
         val listpenyakitadapter = ListPenyakitAdapter(list)
         rvdisease.adapter = listpenyakitadapter
+
+        listpenyakitadapter.setOnItemClickCallback(object : ListPenyakitAdapter.OnItemClickCallback{
+            override fun onItemClicked(data: DataPenyakit) {
+                val diseaseParcel = DataPenyakit(
+                    data.namapenyakit,
+                    data.detail,
+                    data.jenispengobatan,
+                    data.tingkatbahaya,
+                    data.photo
+                )
+                val moveintent = Intent(this@HomeFragment.requireContext(), DetailPenyakit::class.java)
+                    moveintent.putExtra(EXTRA_DISEASE,diseaseParcel)
+                startActivity(moveintent)
+
+                showSelectedDisease(data)
+            }
+        })
     }
 
 
