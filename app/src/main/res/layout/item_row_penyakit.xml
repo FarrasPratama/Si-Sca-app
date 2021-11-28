@@ -27,7 +27,7 @@
             android:scaleType="centerCrop"
             tools:src="@tools:sample/avatars"/>
 
-        <TextView
+        a<TextView
             android:id="@+id/tv_disease_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             android:layout_toRightOf="@id/gambar_penyakit"
             android:textSize="16sp"
             android:textStyle="bold"
-            tools:text="@string/disease_name"/>
+            tools:text="@string/disease_name" />
 
         <TextView
             android:id="@+id/tv_disease_detail"

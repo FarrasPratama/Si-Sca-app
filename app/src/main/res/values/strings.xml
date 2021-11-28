@@ -6,5 +6,8 @@
     <string name="disease_detail">Detail Penyakit</string>
     <string name="disease_cure">Obat</string>
     <string name="disease_level">Tingkat Bahaya</string>
+    <string name="jam_operasional">Jam Operasional</string>
+    <string name="alamat">Alamat</string>
+    <string name="nama">Nama Obat</string>
 
 </resources>
