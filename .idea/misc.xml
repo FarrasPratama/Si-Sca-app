@@ -16,14 +16,14 @@
         <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/fragment_obat.xml" value="0.22" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/fragment_profile.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/item_obat.xml" value="0.25" />
-        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/item_row_penyakit.xml" value="0.25" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/item_row_penyakit.xml" value="0.1" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/item_rumahsakit.xml" value="0.33" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/layout_of_users.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

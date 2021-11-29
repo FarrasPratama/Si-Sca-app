@@ -1,11 +1,15 @@
 package com.example.sisca_app.Adapters
 
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ListView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -16,10 +20,18 @@ class ObatAdapter (private val listobat: ArrayList<DataPenyakit>):
 
     private lateinit var onItemClickCallback: OnItemClickCallback
 
-    inner class ListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    inner class ListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener{
         var obatName: TextView = itemView.findViewById(R.id.tv_obat_name)
         var jenisPenyakit: TextView = itemView.findViewById(R.id.tv_jenis_penyakit)
         var btnCari: Button = itemView.findViewById(R.id.btnCari)
+
+        override fun onClick(p0: View?) {
+            val intentUri = Uri.parse("geo:-7.9797,112.6304?q=pharmacy")
+            val mapIntent = Intent(Intent.ACTION_VIEW, intentUri)
+            mapIntent.setPackage("com.google.android.apps.maps")
+            itemView.context.startActivity(mapIntent)
+        }
+
     }
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback){
@@ -44,12 +56,8 @@ class ObatAdapter (private val listobat: ArrayList<DataPenyakit>):
         holder.obatName.text = disease.jenispengobatan
         holder.jenisPenyakit.text = disease.namapenyakit
         holder.btnCari.setOnClickListener {
-            onItemClickCallback.onItemClicked(..)
+            onItemClickCallback.onItemClicked(listobat[holder.adapterPosition])
         }
-//        holder.btndetails.setOnClickListener{
-//            onItemClickCallback.onItemClicked(listpenyakit[holder.adapterPosition])
-//            //Toast.makeText(holder.itemView.context, "Anda Memilih " + listpenyakit[holder.adapterPosition].namapenyakit,Toast.LENGTH_SHORT).show()
-//        }
         holder.itemView.setOnClickListener{
             onItemClickCallback.onItemClicked(listobat[holder.adapterPosition])
         }

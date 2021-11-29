@@ -2,7 +2,6 @@
   <library name="Gradle: androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/528f127fa3d4aabf4a094a7c156275c2/slidingpanelayout-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51fe76c723381c1bf96786c066b4d90f/slidingpanelayout-1.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e637dda1cede384c4ac0b2f268b6a393/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e637dda1cede384c4ac0b2f268b6a393/transformed/slidingpanelayout-1.0.0/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/e637dda1cede384c4ac0b2f268b6a393/transformed/slidingpanelayout-1.0.0/jars/classes.jar!/" />

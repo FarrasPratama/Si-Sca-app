@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -39,7 +40,7 @@ class ObatFragment: Fragment(){
         val view = inflater.inflate(R.layout.fragment_obat, container, false)
         patientNickName = view.findViewById<View>(R.id.patient_home_name) as TextView
 
-        var rvobat = view.findViewById<View>(R.id.rv_obat)
+        var rvobat = view.findViewById<RecyclerView>(R.id.rv_obat)
         var obatName = view.findViewById<TextView>(R.id.tv_obat_name)
         list.addAll(diseasedata.listdata)
         showRecyclerList()
@@ -54,8 +55,6 @@ class ObatFragment: Fragment(){
             patientNickName!!.text = value!!.getString("nName")
         }
         val reference = FirebaseDatabase.getInstance().reference.child("Sensor")
-
-
         return view
     }
 
@@ -68,6 +67,7 @@ class ObatFragment: Fragment(){
 
         val obatAdapter = ObatAdapter(list)
         rvobat.adapter = obatAdapter
+        obatAdapter.notifyDataSetChanged()
 
         obatAdapter.setOnItemClickCallback(object: ObatAdapter.OnItemClickCallback{
             override fun onItemClicked(data: DataPenyakit) {
@@ -76,7 +76,7 @@ class ObatFragment: Fragment(){
                     data.namapenyakit
                 )
 
-//                val moveintent = Intent(this@HomeFragment.requireContext(), DetailPenyakit::class.java)
+//                val moveintent = Intent(texthis@HomeFragment.requireContext(), DetailPenyakit::class.java)
 //                moveintent.putExtra(DetailPenyakit.EXTRA_DISEASE,diseaseParcel)
 //                startActivity(moveintent)
 
