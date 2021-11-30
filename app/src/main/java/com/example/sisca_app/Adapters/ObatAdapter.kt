@@ -9,47 +9,25 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ListView
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.sisca_app.R
+import java.util.*
 
 class ObatAdapter (private val listobat: ArrayList<DataPenyakit>):
     RecyclerView.Adapter<ObatAdapter.ListViewHolder>(){
 
     private lateinit var onItemClickCallback: OnItemClickCallback
 
-    inner class ListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener{
-        var obatName: TextView = itemView.findViewById(R.id.tv_obat_name)
-        var jenisPenyakit: TextView = itemView.findViewById(R.id.tv_jenis_penyakit)
-        var btnCari: Button = itemView.findViewById(R.id.btnCari)
-
-        override fun onClick(p0: View?) {
-            val intentUri = Uri.parse("geo:-7.9797,112.6304?q=pharmacy")
-            val mapIntent = Intent(Intent.ACTION_VIEW, intentUri)
-            mapIntent.setPackage("com.google.android.apps.maps")
-            itemView.context.startActivity(mapIntent)
-        }
-
-    }
-
-    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback){
-        this.onItemClickCallback = onItemClickCallback
-    }
-
-    interface OnItemClickCallback {
-        fun onItemClicked(data:DataPenyakit)
-    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_obat, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ObatAdapter.ListViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_obat, parent, false)
         return ListViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ObatAdapter.ListViewHolder, position: Int) {
         val disease = listobat[position]
-        Glide.with(holder.itemView.context)
+//        Glide.with(holder.itemView.context)
 //            .load(Disease.photo)
 //            .apply(RequestOptions().override(350,350))
 //            .into(holder.tvGambarPenyakit)
@@ -58,9 +36,47 @@ class ObatAdapter (private val listobat: ArrayList<DataPenyakit>):
         holder.btnCari.setOnClickListener {
             onItemClickCallback.onItemClicked(listobat[holder.adapterPosition])
         }
-        holder.itemView.setOnClickListener{
-            onItemClickCallback.onItemClicked(listobat[holder.adapterPosition])
+//        holder.itemView.setOnClickListener{
+//            onItemClickCallback.onItemClicked(listobat[holder.adapterPosition])
+//        }
+
+    }
+
+    inner class ListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener{
+        var obatName: TextView = itemView.findViewById(R.id.tv_obat_name)
+        var jenisPenyakit: TextView = itemView.findViewById(R.id.tv_jenis_penyakit)
+        var btnCari: Button = itemView.findViewById(R.id.btnCari)
+
+        override fun onClick(p0: View?) {
+            when(p0!!.id) {
+                R.id.btnCari -> {
+                    val intentUri = Uri.parse("geo:-7.9797,112.6304?q=pharmacy")
+                    val mapIntent = Intent(Intent.ACTION_VIEW, intentUri)
+                    mapIntent.setPackage("com.google.android.apps.maps")
+                    itemView.context.startActivity(mapIntent)
+                }
+            }
+//            val intentUri = Uri.parse("geo:-7.9797,112.6304?q=pharmacy")
+//            val mapIntent = Intent(Intent.ACTION_VIEW, intentUri)
+//            mapIntent.setPackage("com.google.android.apps.maps")
+//            itemView.context.startActivity(mapIntent)
+
+            /** COBA **/
+//            btnCari.setOnClickListener {
+//                val intentUri = Uri.parse("geo:-7.9797,112.6304?q=pharmacy")
+//                val mapIntent = Intent(Intent.ACTION_VIEW, intentUri)
+//                mapIntent.setPackage("com.google.android.apps.maps")
+//                itemView.context.startActivity(mapIntent)
+//            }
         }
+    }
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback){
+        this.onItemClickCallback = onItemClickCallback
+    }
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data:DataPenyakit)
     }
 
     override fun getItemCount(): Int {

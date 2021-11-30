@@ -1,16 +1,15 @@
 <component name="libraryTable">
   <library name="Gradle: com.firebaseui:firebase-ui-firestore:7.2.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b62d584b36e548785142c9aa2b3d056c/jetified-firebase-ui-firestore-7.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fd759bef535f008c6110909e10765f1f/transformed/jetified-firebase-ui-firestore-7.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fd759bef535f008c6110909e10765f1f/transformed/jetified-firebase-ui-firestore-7.2.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/fd759bef535f008c6110909e10765f1f/transformed/jetified-firebase-ui-firestore-7.2.0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/cheesefinder-starter/.gradle/caches/transforms-3/fd759bef535f008c6110909e10765f1f/transformed/jetified-firebase-ui-firestore-7.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Downloads/cheesefinder-starter/.gradle/caches/transforms-3/fd759bef535f008c6110909e10765f1f/transformed/jetified-firebase-ui-firestore-7.2.0/res" />
+      <root url="file://$USER_HOME$/Downloads/cheesefinder-starter/.gradle/caches/transforms-3/fd759bef535f008c6110909e10765f1f/transformed/jetified-firebase-ui-firestore-7.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.firebaseui/firebase-ui-firestore/7.2.0/4cc7c31c8517b00bad11449c988e3a5dbe7907b5/firebase-ui-firestore-7.2.0-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/cheesefinder-starter/.gradle/caches/modules-2/files-2.1/com.firebaseui/firebase-ui-firestore/7.2.0/4cc7c31c8517b00bad11449c988e3a5dbe7907b5/firebase-ui-firestore-7.2.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.firebaseui/firebase-ui-firestore/7.2.0/cca0e983c285305399a81bdf06e396934a62fdf4/firebase-ui-firestore-7.2.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/cheesefinder-starter/.gradle/caches/modules-2/files-2.1/com.firebaseui/firebase-ui-firestore/7.2.0/cca0e983c285305399a81bdf06e396934a62fdf4/firebase-ui-firestore-7.2.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContentProviderCompat.requireContext
@@ -24,26 +25,30 @@ import com.google.firebase.firestore.FirebaseFirestore
 class ObatFragment: Fragment(){
     private var list: ArrayList<DataPenyakit> = arrayListOf()
     private lateinit var rvobat: RecyclerView
+
     private var patientNickName: TextView? = null
     private var fAuth: FirebaseAuth? = null
     private var fStore: FirebaseFirestore? = null
     private var userId: String? = null
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        if(container==null) return null
+//        if(container==null) return null
 
         val view = inflater.inflate(R.layout.fragment_obat, container, false)
         patientNickName = view.findViewById<View>(R.id.patient_home_name) as TextView
 
-        var rvobat = view.findViewById<RecyclerView>(R.id.rv_obat)
-        var obatName = view.findViewById<TextView>(R.id.tv_obat_name)
+        val mLayout = LinearLayoutManager(requireActivity())
+        val obatAdapter = ObatAdapter(list)
+
         list.addAll(diseasedata.listdata)
-        showRecyclerList()
+
+        rvobat = view.findViewById(R.id.rv_obat)
+        rvobat.setHasFixedSize(true)
+        rvobat.layoutManager = mLayout
+        rvobat.adapter = obatAdapter
+        obatAdapter.notifyDataSetChanged()
 
         fAuth = FirebaseAuth.getInstance()
         fStore = FirebaseFirestore.getInstance()
@@ -59,32 +64,7 @@ class ObatFragment: Fragment(){
     }
 
     private fun showSelected(data: DataPenyakit){
-        Toast.makeText(requireActivity(), "Anda memilih  " + data.namapenyakit, Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireActivity(), "Anda memilih  " + data.jenispengobatan, Toast.LENGTH_SHORT).show()
     }
-
-    private fun showRecyclerList() {
-        rvobat.layoutManager = LinearLayoutManager(requireActivity())
-
-        val obatAdapter = ObatAdapter(list)
-        rvobat.adapter = obatAdapter
-        obatAdapter.notifyDataSetChanged()
-
-        obatAdapter.setOnItemClickCallback(object: ObatAdapter.OnItemClickCallback{
-            override fun onItemClicked(data: DataPenyakit) {
-                val diseaseParcel = DataPenyakit(
-                    data.jenispengobatan,
-                    data.namapenyakit
-                )
-
-//                val moveintent = Intent(texthis@HomeFragment.requireContext(), DetailPenyakit::class.java)
-//                moveintent.putExtra(DetailPenyakit.EXTRA_DISEASE,diseaseParcel)
-//                startActivity(moveintent)
-
-                showSelected(data)
-            }
-        })
-    }
-
-
 }
 

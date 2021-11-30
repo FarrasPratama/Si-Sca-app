@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="@drawable/background_baru"
-    tools:context=".fragments.HomeFragment">
+    tools:context=".fragments.ObatFragment">
 
     <TextView
         android:id="@+id/tv_obat_menu"
@@ -57,13 +57,13 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:reverseLayout="false"
         android:id="@+id/rv_obat"
         android:layout_width="match_parent"
         android:layout_height="459dp"
         android:layout_marginLeft="9dp"
         android:layout_marginTop="230dp"
-        android:layout_marginRight="9dp" />
-<!--        tools:listitem="@layout/item_row_penyakit" />-->
-
-
+        android:layout_marginRight="9dp"
+        tools:listitem="@layout/item_obat"/>
 </RelativeLayout>
