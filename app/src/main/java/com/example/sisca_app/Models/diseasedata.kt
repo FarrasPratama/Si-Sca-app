@@ -48,6 +48,7 @@ object diseasedata {
     "Fatal",
     "Relatif pada jenisnya")
 
+
 private val gambarpenyakit = intArrayOf(R.drawable.batuginjal,
 R.drawable.covid,
 R.drawable.diare,
