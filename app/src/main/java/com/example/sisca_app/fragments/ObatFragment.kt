@@ -47,6 +47,7 @@ class ObatFragment: Fragment(){
         rvobat = view.findViewById(R.id.rv_obat)
         rvobat.setHasFixedSize(true)
         rvobat.layoutManager = mLayout
+        mLayout.setOrientation(LinearLayoutManager.VERTICAL)
         rvobat.adapter = obatAdapter
         obatAdapter.notifyDataSetChanged()
 

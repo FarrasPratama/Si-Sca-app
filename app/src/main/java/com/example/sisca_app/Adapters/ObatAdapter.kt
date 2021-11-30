@@ -33,13 +33,9 @@ class ObatAdapter (private val listobat: ArrayList<DataPenyakit>):
 //            .into(holder.tvGambarPenyakit)
         holder.obatName.text = disease.jenispengobatan
         holder.jenisPenyakit.text = disease.namapenyakit
-        holder.btnCari.setOnClickListener {
-            onItemClickCallback.onItemClicked(listobat[holder.adapterPosition])
-        }
-//        holder.itemView.setOnClickListener{
+//        holder.btnCari.setOnClickListener {
 //            onItemClickCallback.onItemClicked(listobat[holder.adapterPosition])
 //        }
-
     }
 
     inner class ListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener{
@@ -56,18 +52,6 @@ class ObatAdapter (private val listobat: ArrayList<DataPenyakit>):
                     itemView.context.startActivity(mapIntent)
                 }
             }
-//            val intentUri = Uri.parse("geo:-7.9797,112.6304?q=pharmacy")
-//            val mapIntent = Intent(Intent.ACTION_VIEW, intentUri)
-//            mapIntent.setPackage("com.google.android.apps.maps")
-//            itemView.context.startActivity(mapIntent)
-
-            /** COBA **/
-//            btnCari.setOnClickListener {
-//                val intentUri = Uri.parse("geo:-7.9797,112.6304?q=pharmacy")
-//                val mapIntent = Intent(Intent.ACTION_VIEW, intentUri)
-//                mapIntent.setPackage("com.google.android.apps.maps")
-//                itemView.context.startActivity(mapIntent)
-//            }
         }
     }
 
