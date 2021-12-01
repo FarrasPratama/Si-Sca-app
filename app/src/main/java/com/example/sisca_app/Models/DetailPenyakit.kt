@@ -52,7 +52,7 @@ const val EXTRA_DISEASE ="extra_disease"
     override fun onClick(p0: View?) {
             when(p0?.id) {
                 R.id.btn_maps -> {
-                val IntentUri = Uri.parse("geo:-7.9797,112.6304?q=dokter")
+                val IntentUri = Uri.parse("geo:-7.9797,112.6304?q=Praktek Dokter")
 
                 val mapIntent = Intent(Intent.ACTION_VIEW,IntentUri)
                 mapIntent.setPackage("com.google.android.apps.maps")
