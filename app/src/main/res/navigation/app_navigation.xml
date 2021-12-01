@@ -19,7 +19,7 @@
         android:id="@+id/fragmentHistory"
         android:name="com.example.sisca_app.fragments.HistoryFragment"
         android:label="fragment_history"
-        tools:layout="@layout/fragment_history" />
+        tools:layout="@layout/fragment_obat" />
     <fragment
         android:id="@+id/fragmentProfile"
         android:name="com.example.sisca_app.fragments.ProfileFragment"

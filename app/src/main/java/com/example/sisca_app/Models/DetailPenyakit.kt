@@ -55,8 +55,8 @@ const val EXTRA_DISEASE ="extra_disease"
                 val IntentUri = Uri.parse("geo:-7.9797,112.6304?q=Praktek Dokter")
 
                 val mapIntent = Intent(Intent.ACTION_VIEW,IntentUri)
-                    mapIntent.setPackage("com.google.android.apps.maps")
-                    startActivity(mapIntent)
+                mapIntent.setPackage("com.google.android.apps.maps")
+                startActivity(mapIntent)
                 }
             }
     }

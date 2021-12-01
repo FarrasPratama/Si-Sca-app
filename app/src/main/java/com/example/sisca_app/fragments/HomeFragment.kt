@@ -31,14 +31,14 @@ class HomeFragment : Fragment() {
     private lateinit var rvdisease:RecyclerView
     private var list: ArrayList<DataPenyakit> = arrayListOf()
     private var patientNickName: TextView? = null
-    private var bpmValue: TextView? = null
-    private var conditionValue: TextView? = null
+//    private var bpmValue: TextView? = null
+//    private var conditionValue: TextView? = null
     private var fAuth: FirebaseAuth? = null
     private var fStore: FirebaseFirestore? = null
     private var userId: String? = null
-    private var bpm: String? = null
-    private var relayButton: Button? = null
-    private var relayState = "OFF"
+//    private var bpm: String? = null
+//    private var relayButton: Button? = null
+//    private var relayState = "OFF"
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

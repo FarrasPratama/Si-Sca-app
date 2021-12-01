@@ -1,7 +1,6 @@
 package com.example.sisca_app.fragments
 
 import android.widget.TextView
-import android.app.DatePickerDialog.OnDateSetListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import android.view.LayoutInflater
@@ -9,9 +8,6 @@ import android.view.ViewGroup
 import android.os.Bundle
 import android.widget.RelativeLayout
 import com.example.sisca_app.R
-import com.google.firebase.firestore.DocumentSnapshot
-import com.google.firebase.firestore.FirebaseFirestoreException
-import android.app.DatePickerDialog
 import android.view.View
 import androidx.fragment.app.Fragment
 import java.util.*
@@ -28,7 +24,7 @@ class HistoryFragment : Fragment() {
         super.onCreateView(inflater, container, savedInstanceState)
         if (container == null) return null
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_history, container, false) as RelativeLayout
+        val view = inflater.inflate(R.layout.fragment_obat, container, false) as RelativeLayout
 
         patientNickName = view.findViewById<View>(R.id.patient_history_name) as TextView
 

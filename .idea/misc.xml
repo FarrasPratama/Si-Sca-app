@@ -3,6 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/activity_chat.xml" value="0.22" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/activity_detail_penyakit.xml" value="0.22" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/activity_doctor_register.xml" value="0.22" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/activity_register.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/alert_layout.xml" value="0.33" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/fragment_doctor__list.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/fragment_doctor_list.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/fragment_history.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/fragment_home.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/fragment_obat.xml" value="0.1" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/fragment_profile.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/item_obat.xml" value="0.33" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/item_row_penyakit.xml" value="0.33" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/item_rumahsakit.xml" value="0.33" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/layout/layout_of_users.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/asus/AndroidStudioProjects/si-sca-app/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
+=======
         <entry key="..\:/Si-Sca-app-main/Si-Sca-app-main/app/src/main/res/drawable/alert_background.xml" value="0.1359375" />
         <entry key="..\:/Si-Sca-app-main/Si-Sca-app-main/app/src/main/res/drawable/blackring.xml" value="0.1359375" />
         <entry key="..\:/Si-Sca-app-main/Si-Sca-app-main/app/src/main/res/drawable/et_bg.xml" value="0.1359375" />
@@ -22,6 +41,7 @@
         <entry key="..\:/Si-Sca-app-main/Si-Sca-app-main/app/src/main/res/layout/fragment_profile.xml" value="0.4" />
         <entry key="..\:/Si-Sca-app-main/Si-Sca-app-main/app/src/main/res/layout/item_row_penyakit.xml" value="0.1" />
         <entry key="..\:/Si-Sca-app-main/Si-Sca-app-main/app/src/main/res/layout/layout_of_users.xml" value="0.25" />
+>>>>>>> 53fed8e2ba47cfacfed59530e7296d70baf9d051
       </map>
     </option>
   </component>

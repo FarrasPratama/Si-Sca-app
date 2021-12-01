@@ -1,15 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.loader:loader:1.0.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e34adaaf6ce9f47e84a3825926796ea1/loader-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/71c8534d3d10ef273534881eebe6afb8/loader-1.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/25e61eedf712bb18024706f6b01eefb7/transformed/loader-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/25e61eedf712bb18024706f6b01eefb7/transformed/loader-1.0.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/25e61eedf712bb18024706f6b01eefb7/transformed/loader-1.0.0/res" />
+      <root url="jar://$USER_HOME$/Downloads/cheesefinder-starter/.gradle/caches/transforms-3/25e61eedf712bb18024706f6b01eefb7/transformed/loader-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Downloads/cheesefinder-starter/.gradle/caches/transforms-3/25e61eedf712bb18024706f6b01eefb7/transformed/loader-1.0.0/res" />
+      <root url="file://$USER_HOME$/Downloads/cheesefinder-starter/.gradle/caches/transforms-3/25e61eedf712bb18024706f6b01eefb7/transformed/loader-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.loader/loader/1.0.0/b9ef587f3e46c7fe5b00264989764e43ff45cada/loader-1.0.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/cheesefinder-starter/.gradle/caches/modules-2/files-2.1/androidx.loader/loader/1.0.0/b9ef587f3e46c7fe5b00264989764e43ff45cada/loader-1.0.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
